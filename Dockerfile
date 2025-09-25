@@ -8,7 +8,7 @@ RUN npm install && \
 
 FROM nginx
 ENV PORT=8080
-COPY --from=build /dheeraj/build /usr/share/nginx/html
+COPY --from=build /dhee/build /usr/share/nginx/html
 RUN useradd -m dheeraj
 EXPOSE 80
 ENTRYPOINT ["nginx" ] 
