@@ -7,7 +7,7 @@ RUN npm install && \
 
 
 FROM nginx
-ENV PORT=8080
+ENV workspace=dev
 COPY --from=build /dhee/build /usr/share/nginx/html
 RUN useradd -m dheeraj
 EXPOSE 80
